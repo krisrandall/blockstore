@@ -1,4 +1,4 @@
-#Getting Started with Ethereum & Solidity Smart Contract Writing
+# Getting Started with Ethereum & Solidity Smart Contract Writing
  
 These are just my working notes, included here in case they can help others.
 
