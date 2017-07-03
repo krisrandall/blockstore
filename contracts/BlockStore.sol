@@ -7,17 +7,18 @@ contract BlockStore {
     }
 
     function BlockStore() {
-        
+
     }
     
     mapping(address => KeyValueStore) blockStorage;
     
-    function Store(string _key, string _value) {
+    function store(string _key, string _value) returns (string _stored_val) {
         KeyValueStore store = blockStorage[msg.sender];
         store.keyValuePair[_key] = _value;
+        return _value;
     }
     
-    function Fetch(string _key) returns (string _value) {
+    function fetch(string _key) returns (string _value) {
         KeyValueStore store = blockStorage[msg.sender];
         return store.keyValuePair[_key];
     }
