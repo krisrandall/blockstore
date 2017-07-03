@@ -17,7 +17,7 @@ A public key-value storage space on the blockchain.
 
 `BlockStore.fetch.call( 'my_variable_name' )`
 
-####Via `truffle console` :
+#### Via `truffle console` :
 
 ```
 > BlockStore.deployed().then( function(instance) { b = instance; } )     
