@@ -116,4 +116,19 @@ I'm going to commit these ramblings .. because once i've managed to achieve it a
 
     
     	
+ Trying this : https://github.com/ethereum/solc-js
  
+ Actually, first trying this : downloading mist : https://github.com/ethereum/mist/releases
+ 
+ Ok - I think deploying via mist has worked ! 
+ Contract is in this block ? : https://etherscan.io/block/0x8a8a6b8210980d9f5dd58e063eba543ceccbdf6dc5985ee73f1d866c63ba6325
+ 
+ This is the Block Store contract on the live chain : 0xd9889b8649E8CC758782490229eb4F7F9A1d64d9
+ 
+ I think it cost about 0.01 ETH -- $3.50 AUD -- this is ok.
+ 
+ 
+Here is the site I used for conversion : https://www.coingecko.com/en/price_charts/ethereum/aud
+
+I'm going to commit this now -- later today, or in the next few days, I will try storing and fetching something from the contract, then update all this documentation into something that is useful for both showing people how to easily use the contract, and also as a clear tut for putting your contract onto the blockchain.
+
