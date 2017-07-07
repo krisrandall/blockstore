@@ -1,30 +1,45 @@
 # BlockStore
 
 
-A public key-value storage space on the blockchain.
+A key-value storage space on the blockchain.
 
-## To access the live contract 
+## Live BlockStore
 
-*TODO : put on blockchain and put address here*
+**Address** 0xd9889b8649E8CC758782490229eb4F7F9A1d64d9
 
-## To use the BlockStore
+**ABI** `[ { "constant": false, "inputs": [ { "name": "_key", "type": "string" } ], "name": "fetch", "outputs": [ { "name": "_value", "type": "string" } ], "payable": false, "type": "function" }, { "constant": false, "inputs": [ { "name": "_key", "type": "string" }, { "name": "_value", "type": "string" } ], "name": "store", "outputs": [ { "name": "_stored_val", "type": "string" } ], "payable": false, "type": "function" }, { "inputs": [], "payable": false, "type": "constructor" } ]`
+
+
+
+## To use the BlockStore  
+
+In Geth :
+
+#### To access the live BlockStore
+
+```
+> var abi = [ { "constant": false, "inputs": [ { "name": "_key", "type": "string" } ], "name": "fetch", "outputs": [ { "name": "_value", "type": "string" } ], "payable": false, "type": "function" }, { "constant": false, "inputs": [ { "name": "_key", "type": "string" }, { "name": "_value", "type": "string" } ], "name": "store", "outputs": [ { "name": "_stored_val", "type": "string" } ], "payable": false, "type": "function" }, { "inputs": [], "payable": false, "type": "constructor" } ];         
+> var address = '0xd9889b8649E8CC758782490229eb4F7F9A1d64d9';       
+> var blockStore = eth.contract(abi).at(address);    
+```
 
 #### To store a value
 
-`BlockStore.store( 'my_variable_name', 'my variable value' )`
+~~> blockStore.store( 'my\_variable\_name', 'my variable value' )~~
+
+Use mist - I can't figure out how to call the store method succesfully using geth.
+
 
 #### To retrieve a value
 
-`BlockStore.fetch.call( 'my_variable_name' )`
+`> blockStore.fetch.call( 'my_variable_name' )`
 
-#### Via `truffle console` :
 
-```
-> BlockStore.deployed().then( function(instance) { b = instance; } )     
-> b.store( 'my_var', 'my first successful store' )
-> b.fetch.call( 'my_var' )
-```
  
 ## Other Notes
 
-Here are my working notes from start to finish creating an ethereum solidity smart contract : [docs/GettingStarted.md](docs/GettingStarted.md)
+Here are some of my working notes from start to finish creating an ethereum solidity smart contract :   
+    
+* [Getting started with Ethereum and writing Smart Contracts](docs/GettingStarted.md)      
+* [Getting a Contract onto the live Ethereum blockchain](docs/ContractOnLiveChain.md).   
+* [Other handy geth commands](docs/GethCommands.md)
