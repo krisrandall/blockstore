@@ -35,6 +35,11 @@ Use mist - I can't figure out how to call the store method succesfully using get
 `> blockStore.fetch.call( 'my_variable_name' )`
 
 
+## State of the Daaps
+
+Block Store is listed on the State of the Dapps website :
+
+* https://dapps.ethercasts.com/dapp/block-store
  
 ## Other Notes
 
