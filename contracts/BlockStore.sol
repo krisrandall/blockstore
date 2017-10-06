@@ -5,10 +5,6 @@ contract BlockStore {
     struct KeyValueStore {
         mapping(string => string) keyValuePair;
     }
-
-    function BlockStore() {
-
-    }
     
     mapping(address => KeyValueStore) blockStorage;
     
